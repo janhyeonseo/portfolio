@@ -19,3 +19,7 @@ Next.js (App Router) + TypeScript + Tailwind CSS 포트폴리오 사이트. 이�
 
 ## 구조
 - 컴포넌트는 `src/components`, 사이트 문구 데이터는 `src/data`에 분리한다.
+  - 섹션: `src/components/sections`, 헤더 등 레이아웃: `src/components/layout`, 공용 UI: `src/components/ui`
+  - 데이터 타입(interface/type)은 `src/types/portfolio.ts`에 모은다.
+- 색상은 `globals.css`의 토큰(`background`, `foreground`, `muted`, `border`, `surface`, `accent`)을 쓴다. 포인트 컬러는 `accent` 하나.
+- `cacheComponents`가 켜져 있어 `new Date()`, `cookies()` 등을 쓰면 페이지가 정적이 아니게 된다. 다크모드는 localStorage + `<html class="dark">`로 처리한다.
