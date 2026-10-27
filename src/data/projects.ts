@@ -1,20 +1,26 @@
-import type { Project } from "@/types/portfolio";
+import type { DemoItem, Project } from "@/types/portfolio";
+
+// 데모가 완성되면 각 항목을 별도 Project 카드로 분리한다.
+export const demoItems: DemoItem[] = [
+  {
+    title: "4뎁스 메가메뉴",
+    description: "경로 문자열을 트리로 가공해 4뎁스 서브메뉴를 우측으로 전개",
+  },
+  {
+    title: "HOME 바로가기 카드",
+    description: "권한별 메뉴 분류, 메뉴명 높이 실측 기반 페이지 분할",
+  },
+  {
+    title: "3-그리드 연동 화면",
+    description: "프로세스 → Task → 하위 프로세스, 3개 그리드가 연결된 계층 편집",
+  },
+];
 
 export const projects: Project[] = [
   {
-    title: "4뎁스 메가메뉴 데모",
-    description: "경로 문자열을 트리로 가공해 4뎁스 서브메뉴를 우측으로 전개하는 메가메뉴",
-    status: "preparing",
-  },
-  {
-    title: "HOME 바로가기 카드 데모",
-    description: "권한별 메뉴 분류와 메뉴명 높이 실측 기반 페이지 분할을 적용한 바로가기 카드",
-    status: "preparing",
-  },
-  {
-    title: "3-그리드 연동 화면 데모",
-    description: "프로세스 → Task → 하위 프로세스, 3개 그리드가 서로 연결된 계층 편집 화면",
-    status: "preparing",
+    title: "인터랙티브 데모",
+    status: "upcoming",
+    items: demoItems,
   },
   {
     title: "GAN·CNN 활용 관광지 추천 서비스",

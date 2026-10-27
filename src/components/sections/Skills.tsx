@@ -5,7 +5,7 @@ import { skillGroups } from "@/data/skills";
 export default function SkillsSection() {
   return (
     <Section id="skills" title="Skills">
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group) => (
           <div key={group.title} className="rounded-xl border border-border p-5 sm:p-6">
             <h3 className="font-semibold">{group.title}</h3>

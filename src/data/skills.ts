@@ -20,4 +20,8 @@ export const skillGroups: SkillGroup[] = [
     note: "이 포트폴리오를 TypeScript로 제작하고 있습니다.",
     skills: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase"],
   },
+  {
+    title: "AI · 데이터 (학부 연구)",
+    skills: ["Python", "YOLOv5", "Stable Diffusion"],
+  },
 ];

@@ -43,5 +43,4 @@ export const certifications: Certification[] = [
   { name: "SQLD" },
   { name: "빅데이터 관리사", detail: "한국품질재단, 2022.04" },
   { name: "정보처리기사", detail: "필기 합격 (실기 결과 대기)" },
-  { name: "운전면허 2종 보통" },
 ];

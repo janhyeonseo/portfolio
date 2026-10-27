@@ -1,5 +1,6 @@
 import type { Experience } from "@/types/portfolio";
 
+// 배열 순서 = 화면 표시 순서. tier가 "core"인 업무가 먼저 크게 보이고 "more"는 접힌 영역에 들어간다.
 export const experiences: Experience[] = [
   {
     category: "SI 프로젝트",
@@ -11,16 +12,8 @@ export const experiences: Experience[] = [
     stack: ["React", "JavaScript(ES6+)", "AG Grid", "Java", "Spring Boot", "MyBatis", "Oracle", "Git"],
     tasks: [
       {
-        no: 1,
-        title: "레거시 C# 프로그램 → React 이관 (화면 10종 + 팝업 11종 = 21종)",
-        points: [
-          "레거시 C# 화면의 구조·업무 규칙을 분석해 React + Spring으로 재구현",
-          "로직 파악이 어려운 부분은 상급 개발자와 페어링으로 분석·검증",
-        ],
-      },
-      {
-        no: 2,
         title: "3-그리드 계층 연동 화면 (표준 프로세스 구성 화면 3종)",
+        tier: "core",
         featured: true,
         points: [
           "프로세스 → Task → 하위 프로세스 3개 그리드 연동: 양방향 선택 이동, 행 순서 변경, 저장 전 변경 감지 확인",
@@ -35,8 +28,8 @@ export const experiences: Experience[] = [
         },
       },
       {
-        no: 3,
         title: "4뎁스 메가메뉴 (프론트+백엔드 전담)",
+        tier: "core",
         points: [
           "3뎁스까지만 지원하던 사내 공통 메뉴 컴포넌트의 한계를 넘어 4뎁스 서브메뉴 우측 전개 구현",
           "계층 쿼리(CONNECT BY / SYS_CONNECT_BY_PATH)로 메뉴 경로를 조회하고, 경로 문자열을 split → 정렬 → 트리로 가공하는 함수 직접 작성",
@@ -44,8 +37,8 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        no: 4,
         title: "HOME 화면 신규 개발",
+        tier: "core",
         points: [
           "메뉴 쿼리를 재사용해 바로가기 카드 4개를 부모-자식/권한별로 분류, 권한 없는 메뉴는 딤 처리",
           "메뉴명 높이 실측(offsetHeight / lineHeight) 기반 동적 페이지 분할",
@@ -53,8 +46,16 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        no: 5,
+        title: "레거시 C# 프로그램 → React 이관 (화면 10종 + 팝업 11종 = 21종)",
+        tier: "core",
+        points: [
+          "레거시 C# 화면의 구조·업무 규칙을 분석해 React + Spring으로 재구현",
+          "로직 파악이 어려운 부분은 상급 개발자와 페어링으로 분석·검증",
+        ],
+      },
+      {
         title: "계획구성도 상세 화면 (약 3,700줄, UI 전담)",
+        tier: "more",
         points: [
           "장비 유형별 동적 그리드/팝업 파라미터 분기, 탭·트리·팝업 복합 화면",
           "\"미사용 값 기준 채번\"으로 중간 행 삭제 시 번호 어긋남 해결",
@@ -62,8 +63,8 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        no: 6,
         title: "공지사항 · 즐겨찾기 · 공통 화면",
+        tier: "more",
         points: [
           "공지사항 목록·상세·등록·댓글·N-Depth 대댓글·첨부파일·조회수 (계층 쿼리 + 트리 변환)",
           "즐겨찾기 폴더-메뉴 트리, 폴더 CRUD, 사이드바 연동",
@@ -71,16 +72,16 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        no: 7,
         title: "데이터 구조 개선 제안 (채택)",
+        tier: "more",
         points: [
           "투자·구매요청·발주 등이 혼재된 단일 Task/승인 테이블을 9개 테이블로 분리 설계 제안",
           "팀 결정으로 운영 DB에 반영",
         ],
       },
       {
-        no: 8,
         title: "테스트·배포",
+        tier: "more",
         points: [
           "오픈 전 2개월간 크로스체크 단위·화면 테스트",
           "개발 환경 배포 직접 수행",

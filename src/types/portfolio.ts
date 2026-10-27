@@ -31,9 +31,12 @@ export interface Metric {
   note?: string;
 }
 
+// core: 처음부터 크게 보이는 업무 / more: "더 보기"로 펼치는 업무
+export type TaskTier = "core" | "more";
+
 export interface ExperienceTask {
-  no: number;
   title: string;
+  tier: TaskTier;
   points: string[];
   featured?: boolean;
   metric?: Metric;
@@ -50,11 +53,17 @@ export interface Experience {
   tasks: ExperienceTask[];
 }
 
-export type ProjectStatus = "preparing" | "done";
+export type ProjectStatus = "upcoming" | "done";
+
+export interface DemoItem {
+  title: string;
+  description: string;
+}
 
 export interface Project {
   title: string;
-  description: string;
+  description?: string;
+  items?: DemoItem[];
   status: ProjectStatus;
   meta?: string;
   role?: string;
